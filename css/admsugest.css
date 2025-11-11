@@ -1,0 +1,42 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #fef6ea;
+}
+
+
+main h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.comentarios-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.comentario-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  color: #333;
+  transition: transform 0.2s;
+}
+
+.comentario-card:hover {
+  transform: scale(1.03);
+}
+
+.comentario-card h3 {
+  margin-top: 0;
+  font-size: 1.1em;
+  color: #5b7d3b;
+}
+
+.comentario-card p {
+  font-size: 0.95em;
+  line-height: 1.4;
+}

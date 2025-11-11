@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Receita de Cappuccino</title>
+<link rel="stylesheet" href="../css/capuccino.css">
+</head>
+<body>
+  <div class="imagem-topo">
+    <img src="../imagens/capuccino.jpg" alt="Cappuccino">
+  </div>
+
+  <div class="header">
+    <h1>Receita de Cappuccino</h1>
+  </div>
+
+  <div class="tempo-preparo">
+    ⏱️ Tempo de preparo: 10 minutos
+  </div>
+
+  <div class="container">
+    <h2>🧂 Ingredientes</h2>
+    <ul>
+      <li>2 colheres de sopa de café solúvel</li>
+      <li>2 colheres de sopa de chocolate em pó (ou achocolatado)</li>
+      <li>1 colher de sopa de açúcar (ou a gosto)</li>
+      <li>1 xícara (200ml) de leite integral</li>
+      <li>1 pitada de canela (opcional)</li>
+    </ul>
+
+    <h2>👨‍🍳 Modo de Preparo</h2>
+    <ol>
+      <li>Em uma panela pequena, aqueça o leite em fogo médio até começar a levantar fervura.</li>
+      <li>Enquanto isso, em uma caneca, misture o café solúvel, o chocolate em pó e o açúcar.</li>
+      <li>Quando o leite estiver bem quente, despeje-o cuidadosamente sobre os ingredientes na caneca.</li>
+      <li>Misture tudo muito bem com uma colher ou um mini mixer até espumar.</li>
+      <li>Se quiser, finalize com uma pitada de canela por cima para dar um toque especial.</li>
+      <li>Sirva quente e aproveite seu cappuccino caseiro!</li>
+    </ol>
+
+    <div class="avaliacao">
+      <h3>Avalie esta receita:</h3>
+      <div class="estrelas">
+        <span class="estrela" data-index="1">&#9733;</span>
+        <span class="estrela" data-index="2">&#9733;</span>
+        <span class="estrela" data-index="3">&#9733;</span>
+        <span class="estrela" data-index="4">&#9733;</span>
+        <span class="estrela" data-index="5">&#9733;</span>
+      </div>
+    </div>
+
+    <a href="home.html" class="btn">← Voltar ao menu</a>
+  </div>
+
+  <script>
+    const estrelas = document.querySelectorAll('.estrela');
+    let selecionado = 0;
+
+    estrelas.forEach((estrela, index) => {
+      estrela.addEventListener('mouseover', () => {
+        resetHover();
+        for (let i = 0; i <= index; i++) {
+          estrelas[i].classList.add('hover');
+        }
+      });
+
+      estrela.addEventListener('mouseout', () => {
+        resetHover();
+      });
+
+      estrela.addEventListener('click', () => {
+        selecionado = index;
+        atualizarSelecao();
+      });
+    });
+
+    function resetHover() {
+      estrelas.forEach(e => e.classList.remove('hover'));
+    }
+
+    function atualizarSelecao() {
+      estrelas.forEach(e => e.classList.remove('selecionada'));
+      for (let i = 0; i <= selecionado; i++) {
+        estrelas[i].classList.add('selecionada');
+      }
+    }
+  </script>
+</body>
+</html>

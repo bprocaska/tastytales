@@ -1,0 +1,185 @@
+/* SOLUÇÃO DEFINITIVA - CSS com máxima prioridade */
+
+/* Reseta TUDO na página */
+* {
+  box-sizing: border-box !important;
+}
+
+html {
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+body {
+  background-color: #A3C18F !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: Arial, sans-serif !important;
+  height: 100vh !important;
+  display: block !important;
+  flex-direction: column !important;
+  overflow-x: hidden !important;
+}
+
+/* HEADER - força a ficar no topo */
+body > header {
+  background-color: #f5e8c7 !important;
+  height: 100px !important;
+  min-height: 100px !important;
+  max-height: 100px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 0 60px !important;
+  width: 100% !important;
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  z-index: 1000 !important;
+  flex-shrink: 0 !important;
+}
+
+body > header .logo {
+  height: 80px !important;
+  max-height: 80px !important;
+}
+
+body > header nav ul {
+  list-style: none !important;
+  display: flex !important;
+  gap: 30px !important;
+  align-items: center !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body > header nav a {
+  text-decoration: none !important;
+  color: #333 !important;
+  font-weight: bold !important;
+  transition: color 0.3s !important;
+}
+
+body > header nav a:hover {
+  color: green !important;
+}
+
+/* MAIN - remove TODAS as classes e estilos */
+body > main,
+body > main.form-container,
+main.form-container,
+main {
+  background-color: transparent !important;
+  background: transparent !important;
+  padding: 20px !important;
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 100% !important;
+  height: calc(100vh - 100px) !important;
+  min-height: calc(100vh - 100px) !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  flex-direction: column !important;
+  flex-grow: 1 !important;
+}
+
+/* Container do formulário */
+.edit-page-wrapper {
+  width: 100% !important;
+  height: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.edit-form-container {
+  background-color: #fff !important;
+  padding: 40px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
+  width: 100% !important;
+  max-width: 400px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.edit-form-container h1 {
+  text-align: center !important;
+  color: #4b5e3f !important;
+  margin-bottom: 30px !important;
+  margin-top: 0 !important;
+  font-size: 24px !important;
+}
+
+.edit-form-container form {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.edit-form-container form label {
+  display: block !important;
+  margin-bottom: 8px !important;
+  color: #333 !important;
+  font-weight: bold !important;
+  font-size: 14px !important;
+}
+
+.edit-form-container form input[type="text"], 
+.edit-form-container form input[type="password"], 
+.edit-form-container form input[type="file"] {
+  width: 100% !important;
+  padding: 12px !important;
+  margin-bottom: 20px !important;
+  border: 1px solid #bbb !important;
+  border-radius: 6px !important;
+  font-size: 14px !important;
+  box-sizing: border-box !important;
+  background-color: white !important;
+}
+
+.edit-form-container form input[type="file"] {
+  padding: 8px !important;
+}
+
+.edit-form-container button[type="submit"] {
+  width: 100% !important;
+  padding: 12px !important;
+  background-color: #4b5e3f !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+  font-weight: bold !important;
+  transition: background-color 0.3s !important;
+  margin-top: 10px !important;
+  box-sizing: border-box !important;
+}
+
+.edit-form-container button[type="submit"]:hover {
+  background-color: #36432f !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  body > header {
+    padding: 0 20px !important;
+  }
+  
+  body > header .logo {
+    height: 60px !important;
+  }
+  
+  .edit-form-container {
+    width: 95% !important;
+    padding: 30px 20px !important;
+  }
+}

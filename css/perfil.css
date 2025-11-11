@@ -1,0 +1,70 @@
+
+.perfil-fixo {
+  color: #A3C18F;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.icone-cadeado {
+  height: 20px;
+  cursor: pointer;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 100px);
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+.profile-info {
+  color: white;
+  font-size: 18px;
+}
+
+.label {
+  font-size: 12px;
+  color: #e5e5e5;
+  margin-bottom: 4px;
+}
+
+.valuenome {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.valueemail {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.editar-btn {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #ffffff;
+  color: #4b5e3f;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid #4b5e3f;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.editar-btn:hover {
+  background-color: #4b5e3f;
+  color: white;
+}
