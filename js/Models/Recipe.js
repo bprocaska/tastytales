@@ -23,7 +23,6 @@ export class Recipe {
         this.#apiBase = "http://localhost/tastytales/api/recipes";
     }
 
-    // Getters e Setters
     getId = function() { return this.#id; }
     getIdCategory = function() { return this.#idCategory; }
     getName = function() { return this.#name; }
@@ -38,7 +37,6 @@ export class Recipe {
     setPreparationTime = function(time) { this.#preparationTime = time; }
     setImage = function(image) { this.#image = image; }
 
-    // ===== Métodos da API =====
     getAll = async function() {
         try {
             const response = await fetch(`${this.#apiBase}/`);
@@ -121,3 +119,4 @@ export class Recipe {
         return `Recipe [ID: ${this.#id}, Name: ${this.#name}]`;
     }
 }
+
