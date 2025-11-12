@@ -19,7 +19,6 @@ export class User {
         this.#apiBase = "http://localhost/tastytales/api/users";
     }
 
-    // Getters
     getId = function() { return this.#id; }
     getIdType = function() { return this.#idType; }
     getName = function() { return this.#name; }
@@ -28,7 +27,6 @@ export class User {
     getPhoto = function() { return this.#photo; }
     getErrorMessage = function() { return this.#errorMessage; }
 
-    // Setters
     setId = function(id) { this.#id = id; }
     setIdType = function(idType) { this.#idType = idType; }
     setName = function(name) { this.#name = name; }
@@ -36,7 +34,6 @@ export class User {
     setPassword = function(password) { this.#password = password; }
     setPhoto = function(photo) { this.#photo = photo; }
 
-    // ===== Métodos da API =====
 
     login = async function(email, password) {
         try {
@@ -125,7 +122,6 @@ export class User {
         }
     }
 
-    // ===== Métodos utilitários =====
     formLoad = function(form) {
         form.name.value = this.#name ?? "";
         form.email.value = this.#email ?? "";
@@ -135,3 +131,4 @@ export class User {
         return `User [ID: ${this.#id}, Name: ${this.#name}, Email: ${this.#email}]`;
     }
 }
+
